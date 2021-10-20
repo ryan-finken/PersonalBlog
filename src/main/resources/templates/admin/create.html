@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<form method="post" action="/admin/create">
+    <div class="form-group">
+        <label>Title:
+            <input th:field="${post.title}" class="form-control" />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Body:
+            <textarea th:field="${post.body}" class="form-control" />
+        </label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create Post" class="btn btn-success"/>
+    </div>
+</form>
+</body>
+</html>
