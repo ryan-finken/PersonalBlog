@@ -2,6 +2,8 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body>
+<div th:replace="fragments :: header"></div>
+<nav th:replace="fragments :: nav"></nav>
 <form method="post" action="/admin/create">
     <div class="form-group">
         <label>Title:

@@ -3,9 +3,10 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <div th:replace="fragments :: header"></div>
-<div th:each="post : ${posts}">
-    <span th:text="${post.title}"></span>
-    <span th:text="'posted at ' + ${#dates.format(post.timestamp, 'MMM dd yyyy h:mm a')}"></span>
+<div th:replace="fragments :: nav"></div>
+<div class="posts" th:each="post : ${posts}">
+    <span class="post-title" th:text="${post.title}"></span>
+    <span class="post-timestamp" th:text="'posted at ' + ${#dates.format(post.timestamp, 'MMM dd yyyy h:mm a')}"></span>
 </div>
 </body>
 </html>

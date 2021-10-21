@@ -11,3 +11,27 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
+.posts {
+  text-align: center;
+}
+
+.post-title {
+  color: LightBlue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.post-timestamp {
+  font-style: italic;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 20px;
+  color: LightBlue;
+}
