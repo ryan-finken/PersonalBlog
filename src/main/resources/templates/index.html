@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body>
+<div th:replace="fragments :: header"></div>
 <div th:each="post : ${posts}">
     <span th:text="${post.title}"></span>
     <span th:text="'posted at ' + ${#dates.format(post.timestamp, 'MMM dd yyyy h:mm a')}"></span>
