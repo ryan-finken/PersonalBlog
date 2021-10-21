@@ -25,6 +25,6 @@ public class AdminController {
     @PostMapping("create")
     public String processCreatePostForm(@ModelAttribute Post post) {
         posts.save(post);
-        return "index";
+        return "forward:/";
     }
 }

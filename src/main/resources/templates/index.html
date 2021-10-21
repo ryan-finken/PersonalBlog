@@ -2,8 +2,9 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body>
-<h1>
-index works!
-</h1>
+<div th:each="post : ${posts}">
+    <span th:text="${post.title}"></span>
+    <span th:text="'posted at ' + ${#dates.format(post.timestamp, 'MMM dd yyyy h:mm a')}"></span>
+</div>
 </body>
 </html>
