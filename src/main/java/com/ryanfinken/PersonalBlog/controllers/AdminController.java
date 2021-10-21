@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("admin")
 public class AdminController {
     @Autowired
-    public PostRepository posts;
+    public PostRepository postRepository;
 
     @GetMapping("create")
     public String displayCreatePostForm(Model model) {
@@ -24,7 +24,7 @@ public class AdminController {
 
     @PostMapping("create")
     public String processCreatePostForm(@ModelAttribute Post post) {
-        posts.save(post);
-        return "forward:/";
+        postRepository.save(post);
+        return "redirect:/";
     }
 }
