@@ -2,6 +2,7 @@ package com.ryanfinken.PersonalBlog.models;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.sql.Timestamp;
 
@@ -10,8 +11,10 @@ public class Post extends AbstractEntity {
     @CreationTimestamp
     Timestamp timestamp;
 
+    @Column
     private String title;
 
+    @Column(length = 100000)
     private String body;
 
     public Post() {

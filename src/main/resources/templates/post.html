@@ -4,9 +4,21 @@
 <body>
 <div th:replace="fragments :: header"></div>
 <div th:replace="fragments :: navigation"></div>
-<div class="posts" th:each="post : ${posts}">
-    <a class="post-title" th:text="${post.title}" th:href="'/?postId=' + ${post.id}"></a>
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 th:text="${post.title}" class="display-4"></h1>
+  </div>
+  <div class="row justify-content-center">
     <span class="post-timestamp" th:text="'posted at ' + ${#dates.format(post.timestamp, 'MMM dd yyyy h:mm a')}"></span>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="post-body">
+        <p th:text="${post.body}"></p>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
