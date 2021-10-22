@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<div th:replace="fragments :: header"></div>
+<div th:replace="fragments :: navigation"></div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      Below you'll find descriptions of a few projects I've created. Click the title to check out the source code on github!
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <a class="nav-link" href="https://github.com/ryan-finken/SportsScheduler">
+      Sports Scheduler
+    </a>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-8">
+      Built with Spring Boot, Thymeleaf, and Hibernate. An app to help recreational sports players, coaches, and leagues connect. Users can find, create, and register for events at their favorite venue. Learning about other players is as easy as viewing the user roster and clicking through to individual user profiles.
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <a class="nav-link" href="https://github.com/ryan-finken/SportsScheduler">
+      This blog!
+    </a>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-8">
+      Built with Spring Boot, Thymeleaf, and Hibernate. A simple blog site with time stamped posts persisted in a MySQL database.
+    </div>
+  </div>
+</div>
+</body>
+</html>
