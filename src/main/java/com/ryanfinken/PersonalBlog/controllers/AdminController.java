@@ -16,6 +16,11 @@ public class AdminController {
     @Autowired
     public PostRepository postRepository;
 
+    @GetMapping
+    public String displayAdminIndex() {
+        return "admin/index";
+    }
+
     @GetMapping("create")
     public String displayCreatePostForm(Model model) {
         model.addAttribute("post", new Post());
